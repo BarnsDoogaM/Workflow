@@ -1,0 +1,24 @@
+<div class="post">
+    
+    <h1>CommentsWithTodos</h1>
+    <a routerLink="/isLoading">CommentsWithTodos</a>
+    <a style="font-size: 3rem;" [routerLink]="['/fanen/sese']">Activate route</a>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+        
+        </tr>
+      </thead>
+      <div class="isLoading"></div>
+      <tbody>
+        <tr *ngIf="post">
+          <td>{{ post.id }}</td>
+          <td>{{ post.title }}</td>
+      
+        </tr>
+      </tbody>
+    </table>
+  </div>

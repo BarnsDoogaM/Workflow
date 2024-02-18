@@ -1,0 +1,28 @@
+<h1>CombineLatest</h1>
+comments
+<table>
+ 
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>name</th>
+      <th>email</th>
+      <th>body</th>
+    </tr>
+  </thead>
+<tbody *ngIf="comments$ | async as comments">
+    <tr *ngFor="let comment of comments">
+        <td>{{comment.id}} </td>
+        <td><a [routerLink]="['/details/single', comment.id]">{{comment.name}} </a></td>
+        <td>{{comment.email}}</td>
+        <td>{{comment.body}}</td>
+    </tr>
+</tbody>
+</table>
+<h2>Todos</h2>
+<div class="todos">
+  <div class="first-todo"></div>
+  <div class="second-todo"></div>
+  <div class="third-todo"></div>
+  <div class="fourth-todo"></div>
+</div>

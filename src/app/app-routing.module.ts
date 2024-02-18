@@ -9,9 +9,19 @@ import { ErrorComponent } from './error/error.component';
 import { CardFormComponent } from './card-form/card-form.component';
 import { EditformComponent } from './editform/editform.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { FormComponent } from './form/form.component';
+import { IsLoadingComponent } from './isLoading/isLoading.component';
+import { DetailsComponent } from './isLoading/details/details.component';
+import { DetailsFormComponent } from './form/details-form/details-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'actions', pathMatch: 'full' },
+  {path: 'form', component: FormComponent},
+  {path: 'isLoading', component: IsLoadingComponent},
+  {path: 'details/:single/:id', component: DetailsComponent},
+  {path: 'form/:id', component: DetailsFormComponent},
+
+  {path: 'fanen', loadChildren: () => import('./dasmond/fanen/fanen.module').then(m => m.FanenModule)},
   { path: 'actions', component: ActionsComponent },
   { path: 'settings', component: SettingsComponent }, 
   { path: 'history', component: HistoryComponent },
@@ -28,6 +38,8 @@ const routes: Routes = [
   },
   { path: '**', component: ErrorComponent } 
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

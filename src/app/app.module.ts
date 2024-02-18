@@ -16,6 +16,11 @@ import { CardFormComponent } from './card-form/card-form.component';
 import { FormComponent } from './form/form.component';
 import { EditformComponent } from './editform/editform.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { HttpClientModule} from '@angular/common/http'
+import { IsLoadingComponent } from './isLoading/isLoading.component';
+import { DetailsComponent } from './isLoading/details/details.component';
+import { DetailsFormComponent } from './form/details-form/details-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,11 +37,18 @@ import { StatisticsComponent } from './statistics/statistics.component';
     CardFormComponent,
     FormComponent,
     EditformComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    IsLoadingComponent,
+    DetailsComponent,
+    DetailsFormComponent,
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

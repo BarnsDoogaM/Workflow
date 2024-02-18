@@ -1,0 +1,42 @@
+<div class="post">
+  <input
+    placeholder="Search"
+    style="padding: 1rem; margin: 3rem; outline: none;"
+    type="text"
+    [(ngModel)]="SearchPost"
+    (input)="searchPosts($event)"
+    [class.typing]="isTyping" 
+  />
+  <h1>CommentsWithTodos</h1>
+  <a routerLink="/isLoading">CommentsWithTodos</a>
+
+  <!-- Move loading indicator outside the table -->
+  <div class="isLoading" *ngIf="isLoading">Loading...</div>
+
+  <form [formGroup]="formGroup">
+<input type="text" formControlName="title">
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+
+    <!-- Remove the div with ngIf inside tbody -->
+    <tbody>
+      <tr *ngFor="let post of Posts" [ngClass]="getBackgroundColor(post.id)">
+        <td>{{ post.id }}</td>
+        <td>
+          <a [routerLink]="['/form', post.id]">{{ post.title }}</a>
+        </td>
+        <td>{{ post.body }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- <app-isLoading ></app-isLoading> -->

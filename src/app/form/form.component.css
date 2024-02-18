@@ -1,13 +1,57 @@
-.container{
-    display: flex;
-    /* border: 1px solid red; */
+.post{
+   background-color: gray;
+   height: 100vh;
+}
+.name{
+    padding: 5rem
+}
+
+.green-text{
+    color: white;
+    background-color: black;
+}
+
+.blue-text{
+    color: blue;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+th, td{
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.white{
+    background-color: white;
+}
+
+.gold{
     background-color: gold;
+    color: blue;
 }
 
-.nothing{
-    width: 70%;
+.purple{
+    background-color: rgb(117, 76, 117);
 }
 
-.something{
-    width: 30%;
+.rebecapurple{
+    background-color: rebeccapurple;
+    color: white;
 }
+
+.isLoading{
+    margin: 20rem 20rem;
+    color: white;
+    font-size: 3rem;
+    font-family: sans-serif;
+}
+
+.typing {
+    border: 7px solid yellow;
+  }
